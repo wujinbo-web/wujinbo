@@ -34,6 +34,10 @@
 - git reset --hard HEAD~2    (回跳多个文件)
 - git reflog (查找版本ID，git reset --hard 版本号)
 7. 同步到远程仓库
+- git 账号是否登录
+- git remote (获取远程仓库名字)
+- git remote -v (仓库地址)
+- git push origin master
 ### git 三个区
 1. 工作区
 2. 暂存区
