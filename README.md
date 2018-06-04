@@ -46,6 +46,7 @@
 - git checkout (-b)
 - git merge
 10. 标签
+- git tag v1.0
 ### git 三个区
 1. 工作区
 2. 暂存区
