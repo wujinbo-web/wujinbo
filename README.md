@@ -38,6 +38,14 @@
 - git remote (获取远程仓库名字)
 - git remote -v (仓库地址)
 - git push origin master
+8. 多人协助冲突
+- git fetch  (git diff master origin/master) (git merge origin/master)
+- git pull
+9. 分支
+- git branch (-d -D  --merged  --no-merged)
+- git checkout (-b)
+- git merge
+10. 标签
 ### git 三个区
 1. 工作区
 2. 暂存区
