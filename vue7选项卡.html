@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>vue选项卡实战</title>
+    <style media="screen">
+      .red{color: red;}
+      #app div{width:200px; height: 200px; background: #ccc;}
+    </style>
+    <script src="vue.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div id="app">
+      <input
+      type="button"
+      v-for="item,i in datas"
+      :value="item.title"
+      :class="{red:index===i}"
+      @click="fnTab(i)"
+      />
+      <div v-for="item,i in datas" :style="{display:i===index?'block':'none'}">
+        <p v-for="data in item.list">{{data.content}}</p>
+      </div>
+    </div>
+    <script type="text/javascript">
+      let vm=new Vue({
+        el:'#app',
+        data:{
+          datas:[
+            {
+              title:'新闻',
+              list:[
+                {content:"新闻事件1"},
+                {content:"新闻事件2"},
+                {content:"新闻事件3"}
+              ]
+            },
+            {
+              title:'体育',
+              list:[
+                {content:"体育事件1"},
+                {content:"体育事件2"},
+                {content:"体育事件3"}
+              ]
+            },
+            {
+              title:'娱乐',
+              list:[
+                {content:"娱乐事件1"},
+                {content:"娱乐事件2"},
+                {content:"娱乐事件3"}
+              ]
+            }
+          ],
+          index:0
+        },
+        methods:{
+          fnTab(i){
+            this.index=i;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
