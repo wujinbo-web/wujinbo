@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="vue.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div id="app">
+      <p>{{fnFilter}}</p>
+      <p>{{fnReverse}}</p>
+      <p>{{fnReverse}}</p>
+      <p>{{fnReverse}}</p>
+      <p>{{fnReverse}}</p>
+    </div>
+    <script type="text/javascript">
+      let vm=new Vue({
+        el:'#app',
+        data:{
+          arr:[1,2,3,4,5],
+          msg:'wujinbo'
+        },
+        computed:{
+          fnReverse(){
+            return this.msg.split('').reverse().join('')
+          },
+          fnFilter(){
+            console.log('我执行了一次');
+            //计算属性会在缓存中保存，可在模板中重复使用
+            return this.arr.map(item=>item*3).filter(item=>item<=10);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

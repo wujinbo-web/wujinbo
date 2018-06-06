@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="vue.js" charset="utf-8"></script>
+		<style>
+			body,
+			ul,
+			li,
+			h2 {
+				margin: 0;
+				padding: 0;
+			}
+
+			li {
+				list-style: none;
+			}
+			.list>div {
+				margin-bottom: 10px;
+			}
+			.list .show {
+				display: block;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="./css/qq.css" />
+	</head>
+
+	<body onselectstart="return false;">
+		<div id="app">
+			<div class="wrap">
+				<div class="list">
+					<div v-for="item,index in datas" @click="fnShow(index)">
+						<h2><span></span>{{item.title}}</h2>
+						<ul :style="{display:index===n?'block':'none'}">
+							<li
+							v-for="friend in item.friends"
+							class="active"
+							>{{friend}}</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+		//这是我的数据
+		let data=[
+			{
+				title:"我的好友",
+				friends:["小佳Love","从来就是这么正经","leo是个胖子","momo不是陌陌"]
+			},
+			{
+				title:"企业好友",
+				friends:["习近平","普京","奥巴马"]
+			},
+			{
+				title:"黑名单",
+				friends:["安倍","杜特尔特"]
+			}
+		];
+		let vm=new Vue({
+			el:'#app',
+			data:{
+				datas:data,
+				n:-1
+			},
+			methods:{
+				fnShow(index){
+					this.n=this.n===index?'':index;
+				}
+			}
+		});
+		</script>
+	</body>
+
+</html>
