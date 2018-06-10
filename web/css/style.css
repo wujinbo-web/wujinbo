@@ -288,3 +288,37 @@ position: absolute; top:16px; ;left:125px;}
 .activity{width: 348px;}
 .recommend{width: 348px;}
 .recommend .new_title{background-position: right -70px;}
+
+.activity{}
+.activity .con{padding: 17px 25px 0 23px;background: url(../img/activity_bg.jpg) center 0 no-repeat;}
+.activity .info{width: 300px; height: 120px;position: relative;}
+.activity .img{position: absolute;top: 17px;}
+.activity .text{width: 204px; height: 101px; position: absolute;left: 96px; top: 19px;}
+.activity .info h3{height: 30px;}
+.activity .info h3 em{width:23px;height:23px;display: inline-block;
+  border:1px solid #d6d6d6; border-radius: 3px;line-height: 23px;
+  color: #c81712; font-weight: bold;text-align: center;font-size: 14px;}
+.activity .info h3 span{color: #333333;}
+.activity .info p{line-height: 18px;color: #999999;}
+.calendar{width: 294px;position: relative;}
+.calendar h3{height: 34px;background: url(../img/today_bg.gif) repeat-x;
+  line-height: 34px;text-align: center; word-spacing: 10px;}
+.calendar h3 span{font-size: 14px;font-family: arial;}
+.calendar ol{}
+.calendar ol li{width: 40px;height: 40px; margin: 0 2px 2px 0;float: left;
+line-height: 40px; text-align: center;font-size: 12px;position: relative;
+font-weight: bold;background: #ededed;color: #666;}
+.calendar .normal{background: #f8f8f8;color: #ccc;}
+.calendar .active,.calendar .img{position:absolute;top:0;left:0;}
+.calendar .active{width: 36px; height: 36px;border: 2px solid #d30408;}
+.calendar .img{width:40px; height:40px;}
+
+.today_info{height:84px; width:294px;padding:10px; border: 1px solid #c0c0c0;
+position: absolute;top: 140px;left: 260px;background: #fff;box-shadow: 4px 4px 0 rgba(0,0,0,0.2);}
+.today_info img{width: 80px; height:80px;float:left;border: 2px solid #e1e1e1;}
+.today_info .text{width: 200px;float: right;margin-left: 4px;}
+.today_info h4{font-size: 12px;color: #333;}
+.today_info strong{color: #ccc; font-size: 16px;}
+.today_info p{color: #999; line-height: 20px;}
+.today_info span{width: 8px; height: 14px;overflow:hidden;position:absolute;
+top:40px;left:-8px;background:url(../img/dorm.gif) no-repeat;}
