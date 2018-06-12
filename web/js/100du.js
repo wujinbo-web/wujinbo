@@ -1,7 +1,7 @@
 $(function(){
 
   //搜索切换
-  (function(){
+  (function (){
     var arrText = [
       '例如：荷棠鱼坊烧鱼 或 樱花日本料理',
       '例如：昌平区育新站龙旗广场2号楼609室',
@@ -13,8 +13,8 @@ $(function(){
     var aLi=$('#menu li');
     var oText=$('.form').find('.text');
     oText.val(arrText[iNow]);
-    aLi.each(function(index){
-      $(this).click(function(){
+    aLi.each(function (index){
+      $(this).click(function (){
         aLi.attr('class','gradient');
         $(this).attr('class','active');
         iNow=index;
@@ -22,13 +22,13 @@ $(function(){
       });
     });
     //获取焦点清空
-    oText.focus(function(){
+    oText.focus(function (){
       if($(this).val()==arrText[iNow]){
           $(this).val('');
       }
     });
     //失去光标
-    oText.blur(function(){
+    oText.blur(function (){
       if(oText.val()==""){
         oText.val(arrText[iNow]);
       }
@@ -37,7 +37,7 @@ $(function(){
   })();
 
   //update文字滚动
-  (function(){
+  (function (){
     var oDiv=$('.update');
     var arrData = [
         { 'name':'萱萱', 'time':4, 'title':'那些灿烂华美的瞬间', 'url':'http://www.baidu.com/' },
@@ -55,27 +55,21 @@ $(function(){
     var oBtnDown=$('#updateDownBtn');
     var iNow=0;
     for(var i=0;i<arrData.length;i++){
-      str+=`<li>
-        <a href="${arrData[i].url}">
-          <strong>${arrData[i].name}</strong>
-          <span>${arrData[i].time}分钟前</span>
-          ${arrData[i].title}
-        </a>
-      </li>`
+      str += '<li><a href="'+ arrData[i].url +'"><strong>'+ arrData[i].name +'</strong> <span>'+ arrData[i].time +'分钟前</span> 写了一篇新文章：'+ arrData[i].title +'…</a></li>';
     }
     oUl.html(str);
     var iH=oUl.find('li').height();
     var timer=null;
 
-    oBtnUp.click(function(){
+    oBtnUp.click(function (){
       doMove(-1);
     });
-    oBtnDown.click(function(){
+    oBtnDown.click(function (){
       doMove(1);
     });
 
     function autoPlay(){
-      timer=setInterval(function(){
+      timer=setInterval(function (){
         doMove(-1);
       },2500);
     }
@@ -93,14 +87,14 @@ $(function(){
       oUl.stop().animate({'top':iH*iNow},2200,'elasticOut');
     }
 
-    oDiv.hover(function(){
+    oDiv.hover(function (){
       clearInterval(timer);
     },autoPlay);
 
   })();
 
   //options选项卡的切换
-  (function(){
+  (function (){
     fnTab($('.tabNav1'),$('.tabCon1'));
     fnTab($('.tabNav2'),$('.tabCon2'));
 
@@ -108,8 +102,8 @@ $(function(){
       var aElem=oNav.children();
       aCon.hide().eq(0).show();
 
-      aElem.each(function(index){
-        $(this).click(function(){
+      aElem.each(function (index){
+        $(this).click(function (){
           aElem.removeClass('active').addClass('gradient');
           $(this).removeClass('gradient').addClass('active');
 
@@ -124,7 +118,7 @@ $(function(){
   })();
 
   //自动播放的焦点图
-  (function(){
+  (function (){
     var oDiv=$('#fade');
     var aUlLi=oDiv.find('ul li');
     var aOlLi=oDiv.find('ol li');
@@ -133,15 +127,15 @@ $(function(){
     var iNow=0;
     var timer=null;
     fnFade();
-    aOlLi.click(function(){
+    aOlLi.click(function (){
       iNow=$(this).index();
       fnFade();
     });
-    oDiv.hover(function(){
+    oDiv.hover(function (){
       clearInterval(timer);
     },autoPlay);
     function autoPlay(){
-      timer=setInterval(function(){
+      timer=setInterval(function (){
         iNow++;
         iNow%=arr.length;
         fnFade();
@@ -149,7 +143,7 @@ $(function(){
     }
     autoPlay();
     function fnFade(){
-      aUlLi.each(function(i){
+      aUlLi.each(function (i){
         if(i!=iNow){
           aUlLi.eq(i).fadeOut().css('zIndex',1);
           aOlLi.eq(i).removeClass('active');
@@ -163,7 +157,7 @@ $(function(){
   })();
 
   //日历提示说明
-  (function(){
+  (function (){
     var aSpan=$('.calendar h3 span');
     var aImg=$('.calendar ol img');
     var oPrompt=$('.today_info');
@@ -171,7 +165,7 @@ $(function(){
     var oStrong=oPrompt.find('strong');
     var oP=oPrompt.find('p');
 
-    aImg.hover(function(){
+    aImg.hover(function (){
       var iTop=$(this).parent().position().top-30;
       var iLeft=$(this).parent().position().left+55;
       var index=$(this).parent().index()%aSpan.size();
@@ -186,13 +180,13 @@ $(function(){
 
   //BBS论坛
   (function (){
-    $('.bbs ol li').mouseover(function(){
+    $('.bbs ol li').mouseover(function (){
       $('.bbs ol li').removeClass('active').eq($(this).index()).addClass('active');
     });
   })();
 
   //Hot鼠标提示效果
-  (function(){
+  (function (){
     var arr = [
         '',
         '用户1<br />人气1',
@@ -206,14 +200,14 @@ $(function(){
         '用户9<br />人气9',
         '用户10<br />人气10'
       ];
-    $('.hot_area li').mouseover(function(){
+    $('.hot_area li').mouseover(function (){
       var index=$(this).index();
       if(index==0) return;
       $('.hot_area li p').remove();
       var sW=$(this).width()-12;
       var sH=$(this).height()-12;
 
-      $(this).append(`<p style="width:${sW}px;height:${sH}px">${arr[index]}</p>`);
+      $(this).append('<p style="width:'+ sW +'px; height:'+ sH +'px;">'+ arr[index] +'</p>');
     });
   })();
 
