@@ -1,0 +1,100 @@
+/*重置样式*/
+body,ul,ol,li,h1,h2,h3,h4,h5,h6,img,dl,dt,dd,input,div,p,span,em,strong{margin: 0;padding: 0;}
+li{list-style: none;}
+em{font-style:normal;}
+a{text-decoration:none;}
+img{border: 0 none;vertical-align: top;}
+input,textarea{outline: none;}
+textarea{resize:none;overflow:auto;}
+table{border-collapse:collapse;}
+body{font:14px 微软雅黑}
+
+/*public*/
+.fl{float:left;}
+.fr{float:right;}
+.clear{zoom:1;}
+.clear:after{content:""; display:block; clear:both;}
+.wrapper{width: 986px;margin: 0 auto;}
+
+/*main*/
+#nav{width:100%;height:69px;}
+#banner{width:100%;height:398px;background:#f5f4f0;}
+#content{width:986px;margin:0 auto;}
+#footer{width:100%;background:#333;}
+
+#nav .log,#nav .log a{width:99px;height:43px;}
+#nav .log{margin-top:9px;}
+#nav .log a{display: block;background:url(../images/logo.gif) no-repeat;text-indent:-999em;}
+#nav .list{height: 66px;}
+#nav .list li{float: left;width:60px;height:66px;margin: 0 16px; position: relative;}
+#nav .list li.active{border-bottom: 3px solid #ff6600;}
+#nav .list a{display:block;width:60px;height:66px;color:#444;line-height: 66px;font-size:20px;
+text-align: center;}
+#nav .list a:hover{color:#ff6600;}
+#nav .list li:hover .list_son{display:block;z-index: 999;}
+#nav .list_son{width:152px;height:175px;background:url(../images/nav_bg.png) no-repeat;
+  padding-top:21px;position: absolute;left: -46px;bottom:-186px;display:none;}
+#nav .list_son li{float:none;width: 140px; height: 34px; margin:0 auto;}
+#nav .list_son a{display: block;width: 140px; height: 34px;font-size:14px;color:#444;
+line-height: 34px;}
+#nav .list_son a:hover{background:#f6f6f6;}
+
+#banner .banner{position:relative;}
+#banner ul{width:76px;height:15px;position:absolute;bottom:12px;left:50%;margin-left:-38px;}
+#banner li{width:15px;height:15px;float:left;background:#fff;border-radius:50%;margin:0 5px;
+box-shadow:2px 3px 2px #b6b5b3;cursor:pointer;}
+#banner li.active{background:#ff6600;}
+
+#content .download{width:85px;height:104px;text-align: center;}
+#content .download p,#content .item a{font-size:12px;color:#999;}
+#content .item a:hover{text-decoration:underline;}
+#content .download p{height:24px;line-height: 24px;}
+#content .item{width:83px;height:104px;text-align:center;position:relative;}
+#content .item .img{width:85px;height:69px;display:table-cell;vertical-align:middle;}
+#content .item p{width: 83px;position:absolute;bottom:10px;}
+.content_top{padding-top:19px;padding-bottom: 67px;}
+.content_top .left{width: 569px;border-right:1px solid #eee;}
+.content_top .right{width: 416px;}
+.content_top .left .download{padding: 0 72px 0 4px;}
+.content_top .left .item{margin-right:52px;}
+.content_top .right .item{margin-left: 41px;}
+
+.con{width: 290px;margin-right:58px;}
+.con:last-child{margin-right:0;}
+.con h2{height: 40px;font-size:20px;color:#555;}
+.con h2 a{font-size:14px;color:#555;float:right;}
+.con .img{position:relative;width:290px;height:154px;}
+.con p{width:290px;height:34px;position: absolute;bottom:0;background:rgba(242,242,242,0.8);
+line-height:34px;text-align:center;font-size:14px;color:#444;}
+.con .text{padding-top:10px;height:166px;}
+.con .text li{height:26px;}
+.con .text a{line-height:26px;font-size:14px;color:#444;}
+.con .text a:hover{text-decoration:underline;}
+
+.foot_nav{height:229px;padding-top:28px;border-bottom:1px dotted #565656;}
+.foot_nav dl{width:165px;height:229px}
+.foot_nav dt{font-weight:700;}
+.foot_nav dd{}
+.foot_nav a{display:block;line-height:19px;font-size:12px;color:#aaa;}
+.foot_nav .chinese{width:161px;}
+.foot_nav .chinese dt{width:107px;height:22px;border:1px solid #434343;padding-left:29px;
+background:url(../images/bottom_bg.jpg) 8px center no-repeat;position:relative; top:-3px;}
+.foot_nav .chinese dt a{display:block;height:22px;width:107px;line-height: 22px;
+background:url(../images/bottom_bg2.jpg) 90px 8px no-repeat;}
+.foot_nav .chinese dd{height:26px;}
+.foot_nav .chinese a{height:26px;line-height:26px;padding-left: 8px;}
+.foot_nav .chinese a img{margin-right: 4px;}
+
+.friend_link{margin-bottom:20px;}
+.friend_link p{height:37px;color:#666;border-bottom:1px dotted #565656;line-height:37px;
+padding-left:10px;}
+.friend_link a{font-size: 12px; color:#aaa;}
+.friend_link span{color:#636363;}
+
+.bottom{height:158px;}
+.bottom .left{width: 564px;}
+.bottom .left .logo{width:115px;padding-left: 17px;padding-top:22px;}
+.bottom .left p{width:431px;font-size:12px;color:#666;line-height:19px;}
+.bottom .right{overflow:hidden;}
+.bottom .right p{text-align:right;margin-bottom:10px;}
+.bottom .right img{vertical-align:middle;}
