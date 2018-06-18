@@ -49,10 +49,11 @@
 - btn-group-justifiled  宽度自适应父集 a标签可以，input跟button需要套父集
 - btn-group-vertical    横向排列变纵向排列，一般不配合btn-group，不然会产生直角
 ## 表单类
-- 基类form-group form-control
+- 基类form-group分组  form-control 输入框  placeholder="ahdd" 默认值
 - 调整大小 input-lg input-sm...
 - 选中状态 active (选项卡，轮播图之类的)
-- 禁用状态 disable 鼠标移入会有禁用手势
+- 禁用状态 disabled 鼠标移入会有禁用手势
+- input-group-addon
 ## 下拉菜单
 1. data-[*] data-toggle="dropdown"  js触发器
 2. aria-[*] aria-haspopup="true" 点击是否有内容 aria-expanded="true" aria-labelledby="dropdownMenu1" 目前是否展开  （屏幕阅读器）**一般不同
@@ -62,8 +63,34 @@
 - button =>class="dropdown-toggle" data-toggle="dropdown"
 - ul =>dropdown-menu
 5. ul=>dropdown-menu-right  下拉列表靠右显示 
-
-
-
-
-
+6. dropdown-header  列表头
+7. dropdown-divider 列表分割线
+8. li =>text-center
+## 如何判断是否为PC端
+- if(window.navigator.userAgent.toLowerCase().indexOf('mobile')==-1)
+## data-target=".dropdown" 控制另外的菜单
+## 头部
+1. nav
+2. nav-tabs
+3. nav-justifiled        按钮自适应父集宽   废弃
+4. nav-tabs-justifiled    线自适应按钮宽     废弃
+5. nav-pills		 有背景的样式
+6. nav-stacked		 有背景竖状菜单    nav-pill + nav-stacked  配合    nav-tabs有bug
+## 内容
+1. ul  =>  tab-content
+2. li  =>  tab-pane    
+3. a   =>  data-toggle="tab"
+4. 内容切换加ID ，用href="#a" 进行锚点切换
+5. fade in 淡入淡出
+6. 鼠标移入
+$('#myTab a').mouseover(function(){
+      $(this).tab('show');
+    });
+## 导航
+1. nav  =>  navbar navbar-default 白色调  navbar-inverse 黑色调
+2. ul   =>  nav navbar-nav    navbar-rigth 在右侧显示
+3. navbar-static-top  两边的圆角变直角
+4. navbar-fixed-top/navbar-fixed-bottom    固定定位
+5. 固定定位遮挡问题  给Body加margin-top:50px;
+6. div 父= > navbar-header    子a  =>  navbar-brand 加logo
+7. navbar-btn 导航加按钮  navbar-link 导航加链接  navbar-left navbar-text文字垂直居中 navbar-form
