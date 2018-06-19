@@ -94,3 +94,21 @@ $('#myTab a').mouseover(function(){
 5. 固定定位遮挡问题  给Body加margin-top:50px;
 6. div 父= > navbar-header    子a  =>  navbar-brand 加logo
 7. navbar-btn 导航加按钮  navbar-link 导航加链接  navbar-left navbar-text文字垂直居中 navbar-form
+## 下拉导航条
+1. button => navbar-toggle 移动端导航按钮   data-toggle="collapse"  data-target="#...."
+2. span   => icon-bar      横线
+3. 给ul加div父集  =>  collapse navbar-collapse    加ID对应data-target
+## 滚动监听
+1. Body =>  relative  data-spy="scroll" 滚动监听 data-target="#myNavrbar" 监听对象 data-offset="60" 对象距离顶部的距离
+2. nav =>  id="myNavbar"
+
+
+## 媒介特征
+1. max-width
+2. min-width
+## 媒体关键词
+1. not
+2. and
+3. only
+
+- @media all and (min-width:960){} 媒询
