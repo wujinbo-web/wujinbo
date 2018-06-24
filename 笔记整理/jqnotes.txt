@@ -1,0 +1,29 @@
+## jq选择器
+1. $('.one+div') == $('.one').next('div')  选取.one后面一个同级的div 
+   $('.one~div') == $('one').nextAll('div'); 选取.one后面全部同级的div
+2. $('div:event')/$('div:odd') 选取索引值为偶数/奇数  
+   $('div:eq(3)')/$('div:gt(3)')/$('div:lt(3)') 索引值等于/大于/小于3
+3. $('#aa').find('.aa')  寻找子元素  $('p:has(span)')
+4. $('div[title=test]') 属性过滤 (锋利jq - p41)
+5. $('#form :input') :text/:password/:checked(被选中的个数)    表单选择器 
+6  xxx.parent()/children()/eq()  选取父集/子集/选取下标
+   .next()/prev() 元素后/前的一个同辈元素  siblings() 同辈元素
+## jq事件
+1. xxx.focus() 获取焦点 xxx.blur() 失去焦点 xxx.hover('移入事件','移出事件') xxx.toggle('事件1','事件2') 多次点击事件
+blur/focus/load/resize/scroll/unload/click/dbclick/mousedown.../change/select/submit/keydown.../error
+2. xxx.each() 循环
+3. xxx.val()获取value值  xxx.html()获取html代码  xxx.text()获取纯文本(innerText,过滤标签)
+4. xxx.height()/width()/size()/position().top/left   (size=length)(top元素距离顶部的距离)
+5. xxx.fadeIn()/fadeOut()/hide()/show()/fadeTo(speed,opacity,callback) 
+6. xxx.append()/A.insertAfter(B)/insertBefore 添加元素   A插到B之后/之前
+   xx.remove()/xxx.detach()/empty()  1.彻底删除2.删除后保留事件可以再添加3.清空节点内容，节点保留
+   xxx.clone(true)   复制节点。true代表同时复制功能
+   xxx.replaceWith()   替换节点
+7. xxx.unbind('click') 移除事件程序
+8. xx.attr()/.css()   元素属性/样式
+   xx.removeAttr('title')  删除属性
+9. .is(':visible') 判断是否显示
+10. xxx.bind('mouseover',function(){}).bind('mouseout',function(){}) 给元素绑定事件
+    也可简写 xxx.mouseover(function(){}).mouseout(function(){})
+11. event.stopPropagation(); 停止事件冒泡
+12. event.preventDefault();  阻止默认行为
